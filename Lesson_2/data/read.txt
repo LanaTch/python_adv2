@@ -1,0 +1,11 @@
+Hello world!
+Some data
+Simple string
+Flat text
+Beep boop beer
+
+Hello world!
+Some data
+Simple string
+Flat text
+Beep boop beer
