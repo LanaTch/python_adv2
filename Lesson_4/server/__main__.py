@@ -49,7 +49,6 @@ try:
 
         request_json = json.loads(bytes_request)
 
-        response = ''
         if validate_request(request_json):
             action = request_json.get('action')
             controller = action_mapping.get(action)
