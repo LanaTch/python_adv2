@@ -58,7 +58,7 @@ try:
                     response = controller(request_json)
                     print(f'Запрос: {bytes_request.decode()}')
                 except Exception as err:
-                    request_json = make_500(request_json)
+                    response = make_500(request_json)
                     print(err)
             else:
                 response = make_404(request_json)
