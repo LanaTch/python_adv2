@@ -17,6 +17,11 @@ REQUEST = {
     'data': DATA
 }
 
+REQUEST_INVALID = {
+    'data': DATA
+}
+
+
 RESPONSE = {
     'action': ACTION,
     'time': TIME,
@@ -72,13 +77,14 @@ def test_make_500():
     assert code == 500
 
 
-def test_validate_request():
-    response = validate_request(REQUEST)
-    assert response
+def test_valid_validate_request():
+    assert validate_request(REQUEST)
+
+
+def test_invalid_validate_request():
+    assert validate_request(REQUEST_INVALID) == False
 
 
 def test_find_server_action():
     server_actions = find_server_actions()
     assert type(server_actions) is dict
-
-
